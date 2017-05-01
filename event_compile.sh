@@ -1,9 +1,6 @@
-# libevent-2.1.8-stable
-libevent-2.1.8-stable for android
-#The flowing shell is for android platform compile
 #! /bin/sh
 #make && make install
-export NDK_ROOT=<Your NDK Home DIR>
+export NDK_ROOT=<NDK_HOME_DIR>
 export TOOLCHAINS_ROOT=$NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64
 export TOOLCHAINS_PREFIX=$TOOLCHAINS_ROOT/bin
 #export TOOLCHAINS_INCLUDE=$TOOLCHAINS_ROOT/lib/gcc/arm-linux-androideabi/4.9.x/include-fixed
@@ -30,3 +27,5 @@ CPPFLAGS="-I$PLATFORM_INCLUDE" \
 CFLAGS="-nostdlib" \
 LDFLAGS="-Wl,-rpath-link=$PLATFORM_LIB -L$PLATFORM_LIB" \
 LIBS="-lc -lgcc -L$PLATFORM_LIB -L$TOOLCHAINS_INCLUDE"
+
+
